@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<meta charset="utf-8">
+
+<title>Output element sample</title>
+
+<body>
+
+    <article>
+
+        <header>
+
+            <h1>Output element sample</h1>
+
+            <p>Demo showing output element in HTML5</p>
+
+        </header>
+
+        <form onsubmit="return false" oninput="    totalamount.value = Math.round(principal.value * (Math.pow((1 + interest.value / 100), period.value)) * 100) / 100;">
+
+            Principal<input name="principal" id="principal" type="number">
+
+            <br />
+
+            Duration<input name="period" id="period" type="number">
+
+            <br />
+
+            Interest Rate<input name="interest" id="interest" type="number">
+
+            <br />
+
+            Total amount <output name="totalamount" id="totalamount" for="principal period interest"></output>
+
+        </form>
+
+        <footer>
+
+            <h1></h1>
+
+            <p>HTML Goodies</p>
+
+        </footer>
+
+    </article>
+
+</body>
+
+ 
+
+</html>

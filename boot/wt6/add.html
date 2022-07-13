@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Farmers Profile</title>
+
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+
+</head>
+<script type="text/javascript">
+	function calc(A,B,SUM) {
+
+	  var one = Number(A);
+	  if (isNaN(one)) 
+	  {
+		   alert('Invalid entry: '+A); 
+		   one=0; 
+		   }
+	  var two = Number(document.getElementById(B).value); 
+	  if (isNaN(two)) 
+	  { 
+		  alert('Invalid entry: '+B); 
+		  two=0; 
+		}
+		
+
+			document.getElementById(SUM).value = one + two;
+
+		
+         
+	}
+	</script>
+
+<style type="text/css">
+form {
+	font-size: 20px;
+	margin-left: 217px;
+	
+}
+</style>
+<body>
+	<a style="font-family: cursive;font-size: 22px;background-color: #dbf600;" href="index.php">Home</a>
+	<br/><br/>
+
+	<form action="add.php" method="post" enctype="multipart/form-data" name="form1">
+		<table width="50%" border="1" cellspacing = "2" 
+		cellpadding = "5" style="background-color:pink">
+			<tr>
+				<td>Name</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+					<td>Card Number</td>
+					<td><input type="text" name="cardno"></td>
+			</tr>
+			<tr>
+					<td>Image</td>
+					<td><input type="file" value="uploadname" name="uploadname"/></td>
+
+				</tr>
+			<tr>
+				<td>Age</td>
+				<td><input type="text" name="age"></td>
+			</tr>
+			<tr>
+				<td>Village</td>
+				<td><input type="text" name="village"></td>
+			</tr>
+			<tr>
+					<td>Adhar</td>
+					<td><input type="file" value="uploadadhar" name="uploadadhar"/></td>
+			</tr>
+		
+			<tr>
+					<td>Application</td>
+					<td><input type="file" value="application" name="application"/></td>
+			</tr>
+			<tr>
+				<td>7/12 Form</td>
+				<td><input type="file" name="satbara" value=""/></td>
+		</tr>
+
+			<tr>
+				<td>Small Animals</td>
+
+				<td><input type="number" id="small" name="small" min="0" max="5" onChange="calc(this.value,'big','total')" ></td>
+			</tr>
+			<tr>
+				<td>Big Animals</td>
+
+				<td><input type="number"  id="big" name="big" min="0"  max="5" onChange="calc(this.value,'small','total')" ></td>
+			</tr>
+			<tr>
+					<td>Cows</td>
+					<td><input type="number" name="cow"></td>
+			</tr>
+			<tr>
+						<td>Bulls</td>
+						<td><input type="number" name="bull"></td>
+			</tr>
+
+			<tr>
+							<td>Calf</td>
+							<td><input type="number" name="calf"></td>
+			</tr>
+			<tr>
+				<td>Total Animals</td>
+
+				<td><input type="number" id="total" name="total" min="0"  max="5" readonly style="border:5px;"></td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td><input type="submit" name="Submit" value="Save Form" style="font-family: cursive; background-color:#6fff41; font-size: 19px;"></td>
+			</tr>
+		</table>
+
+		<a href="index.html">Capture image from webcam</a>
+		
+	</form>
+
+</body>
+</html>
